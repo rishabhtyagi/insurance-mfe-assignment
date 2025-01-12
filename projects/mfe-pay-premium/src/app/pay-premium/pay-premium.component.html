@@ -1,16 +1,40 @@
-<div>
+<div class="premium-container">
+  <h2>Pay Premium</h2>
+  <div class="form-group">
+    <label for="amount">Enter Amount:</label>
     <input
       type="number"
       id="amount"
       [(ngModel)]="amount"
       placeholder="Enter amount"
+      min="1"
     />
-    <button (click)="calculateDiscount()">Calculate Discount</button>
-  
-    <div *ngIf="discountedAmount !== null">
-      <p>Original Amount: {{ amount | currency }}</p>
-      <p *ngIf="discount !== null">Discount: {{ discount * 100 }}%</p>
-      <p>Discounted Amount: {{ discountedAmount | currency }}</p>
-    </div>
   </div>
-  
+
+  <div class="form-group">
+    <label for="discount">Select Discount:</label>
+    <select id="discount" [(ngModel)]="selectedDiscount">
+      <option value="" disabled>Select a discount</option>
+      <option *ngFor="let discount of discountOptions" [value]="discount">
+        {{ discount * 100 }}%
+      </option>
+    </select>
+  </div>
+
+  <button (click)="calculateDiscount()">Calculate Discount</button>
+
+  <div class="loader" *ngIf="isLoading">
+    <p>Calculating... Please wait.</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div *ngIf="discountedAmount !== null" class="results">
+    <p>Original Amount: {{ amount | currency }}</p>
+    <p *ngIf="selectedDiscount !== null">Discount: {{ selectedDiscount * 100 }}%</p>
+
+    <p>Discounted Amount: {{ discountedAmount | currency }}</p>
+  </div>
+</div>

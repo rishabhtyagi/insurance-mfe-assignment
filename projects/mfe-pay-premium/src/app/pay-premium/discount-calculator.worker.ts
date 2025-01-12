@@ -6,7 +6,14 @@
 //   const discountedAmount = amount - amount * discount;
 //   postMessage({ discount, discountedAmount });
 // });
+/// <reference lib="webworker" />
+
 addEventListener('message', ({ data }) => {
-  const response = `worker response to ${data}`;
-  postMessage(response);
+  const { amount, discount } = data;
+  if (amount && discount) {
+    const discountedAmount = amount - amount * discount;
+    postMessage({ discountedAmount });
+  } else {
+    postMessage({ error: 'Invalid input' });
+  }
 });
