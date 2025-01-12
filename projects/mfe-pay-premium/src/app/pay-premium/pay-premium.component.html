@@ -1,5 +1,20 @@
-<h1>This is from MFE Pay Premium APP</h1>
-<ol>
-    <li>Pay via credit card</li>
-    <li>Pay via UPI</li>
-</ol>
+<h1>Pay Premium</h1>
+<p>Select a payment method:</p>
+<ul>
+  <li>Pay via Credit Card</li>
+  <li>Pay via UPI</li>
+</ul>
+
+<h2>Payment Details</h2>
+<form>
+  <label for="payment-method">Payment Method:</label>
+  <select id="payment-method">
+    <option value="credit-card">Credit Card</option>
+    <option value="upi">UPI</option>
+  </select>
+  <br /><br />
+  <label for="details">Enter Details:</label>
+  <input id="details" type="text" placeholder="Card Number or UPI ID" />
+  <br /><br />
+  <button type="button">Submit Payment</button>
+</form>
