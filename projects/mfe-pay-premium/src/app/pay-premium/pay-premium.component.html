@@ -1,20 +1,16 @@
-<h1>Pay Premium</h1>
-<p>Select a payment method:</p>
-<ul>
-  <li>Pay via Credit Card</li>
-  <li>Pay via UPI</li>
-</ul>
-
-<h2>Payment Details</h2>
-<form>
-  <label for="payment-method">Payment Method:</label>
-  <select id="payment-method">
-    <option value="credit-card">Credit Card</option>
-    <option value="upi">UPI</option>
-  </select>
-  <br /><br />
-  <label for="details">Enter Details:</label>
-  <input id="details" type="text" placeholder="Card Number or UPI ID" />
-  <br /><br />
-  <button type="button">Submit Payment</button>
-</form>
+<div>
+    <input
+      type="number"
+      id="amount"
+      [(ngModel)]="amount"
+      placeholder="Enter amount"
+    />
+    <button (click)="calculateDiscount()">Calculate Discount</button>
+  
+    <div *ngIf="discountedAmount !== null">
+      <p>Original Amount: {{ amount | currency }}</p>
+      <p *ngIf="discount !== null">Discount: {{ discount * 100 }}%</p>
+      <p>Discounted Amount: {{ discountedAmount | currency }}</p>
+    </div>
+  </div>
+  

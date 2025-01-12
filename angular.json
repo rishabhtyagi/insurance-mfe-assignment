@@ -248,7 +248,8 @@
 						],
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe-pay-premium/webpack.config.js",
-						"commonChunk": false
+            "commonChunk": false,
+            "webWorkerTsConfig": "projects/mfe-pay-premium/tsconfig.worker.json"
 					},
 					"configurations": {
 						"production": {
@@ -319,7 +320,8 @@
 						"styles": [
 							"projects/mfe-pay-premium/src/styles.scss"
 						],
-						"scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "projects/mfe-pay-premium/tsconfig.worker.json"
 					}
 				}
 			}
