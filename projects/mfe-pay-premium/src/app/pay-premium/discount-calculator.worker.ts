@@ -2,6 +2,6 @@
 
 addEventListener('message', ({ data }) => {
   const { amount, discount } = data;
-  const finalAmount = amount + amount * discount; // Add discount (or surcharge)
+  const finalAmount = amount - amount * discount; // Add discount (or surcharge)
   postMessage({ finalAmount });
 });

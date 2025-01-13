@@ -16,12 +16,23 @@
     <select
       id="payment-option"
       [(ngModel)]="selectedPaymentOption"
-      (change)="calculateFinalAmount()"
+      (change)="displayDiscount()"
     >
       <option *ngFor="let option of paymentOptions" [value]="option.name">
-        {{ option.name }}
+        {{ option.name }} 
+        ({{ option.discount >= 0 ? '+' : '' }}{{ option.discount * 100 }}%)
       </option>
     </select>
+  </div>
+
+  <!-- Display Discount for Selected Payment Option -->
+  <div *ngIf="selectedDiscount !== null">
+    <p>
+      <strong>Offer:</strong>
+      {{ selectedDiscount !== null ? (selectedDiscount < 0 ? 'Surcharge' : 'Discount') : '' }}
+      of {{ getAbsoluteValue(selectedDiscount * 100) }}% on {{ selectedPaymentOption }} payments.
+    </p>
+    
   </div>
 
   <!-- Button to Calculate Final Amount -->
