@@ -1,25 +1,35 @@
 <div>
+  <!-- Display Policy Details -->
+  <div *ngIf="policyDetails">
+    <h3>Policy Details</h3>
+    <p><strong>Policy Name:</strong> {{ policyDetails.policyName }}</p>
+    <p><strong>Pending Premium Amount:</strong> {{ policyDetails.premiumAmount | currency }}</p>
+  </div>
+
+  <br/>
+
+
   <!-- Input for Premium Amount -->
   <div>
-    <label for="amount">Premium Amount:</label>
+    <label for="amount">Enter Amount to Pay: </label>
     <input
       type="number"
       id="amount"
       [(ngModel)]="amount"
-      placeholder="Enter premium amount"
+      placeholder="Enter Amount to Pay"
     />
   </div>
 
   <!-- Dropdown for Payment Options -->
   <div>
-    <label for="payment-option">Select Payment Option:</label>
+    <label for="payment-option">Select Payment Option: </label>
     <select
       id="payment-option"
       [(ngModel)]="selectedPaymentOption"
       (change)="displayDiscount()"
     >
       <option *ngFor="let option of paymentOptions" [value]="option.name">
-        {{ option.name }} 
+        {{ option.name }}
         ({{ option.discount >= 0 ? '+' : '' }}{{ option.discount * 100 }}%)
       </option>
     </select>
@@ -40,8 +50,12 @@
 
   <!-- Display Results -->
   <div *ngIf="finalPayableAmount !== null">
-    <p>Original Amount: {{ amount | currency }}</p>
+    <p>Selected Amount: {{ amount | currency }}</p>
     <p>Payment Option: {{ selectedPaymentOption }}</p>
     <p>Final Payable Amount: {{ finalPayableAmount | currency }}</p>
+    
+    <button ONCLICK="alert('Remaining/Extra amount will be adjusted in next Premium')">Proceed To Pay</button>
   </div>
+
+  
 </div>

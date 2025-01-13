@@ -4,19 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PolicyService {
-  private policyDetails = {
+  private static policyDetails = {
     policyName: 'Life Cover Premium',
-    premiumAmount: 5000,
+    premiumAmount: 5000
   };
 
   // Get policy details
-  getPolicyDetails() {
+  static getPolicyDetails() {
     return this.policyDetails;
   }
 
   // Set policy details (if needed)
   setPolicyDetails(details: { policyName: string; premiumAmount: number }) {
-    this.policyDetails = details;
+    PolicyService.policyDetails = details;
     localStorage.setItem('policyDetails', JSON.stringify(details)); // Store in localStorage
   }
 }

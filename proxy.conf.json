@@ -1,0 +1,10 @@
+{
+    "/projects_mfe-pay-premium_src_app_pay-premium_discount-calculator_worker_ts.js": {
+      "target": "http://localhost:4400",
+      "secure": false,
+      "pathRewrite": {
+        "^/projects_mfe-pay-premium_src_app_pay-premium_discount-calculator_worker_ts.js": "/projects/mfe-pay-premium/src/app/pay-premium/discount-calculator.worker.ts"
+      }
+    }
+  }
+  

@@ -6,6 +6,7 @@ module.exports = withModuleFederationPlugin({
 
   exposes: {
     './InsuranceDetailsModule': './projects/mfe-insurance-details/src/app/insurance-details/insurance-details.module.ts',
+    './PolicyService': './projects/mfe-insurance-details/src/app/services/policy.service.ts', // Expose a service
   },
 
   shared: {
