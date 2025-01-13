@@ -6,39 +6,52 @@ import { Component } from '@angular/core';
   styleUrls: ['./pay-premium.component.scss']
 })
 export class PayPremiumComponent {
-  amount: number | null = null;
-  discountOptions = [0.1, 0.2, 0.3]; // Discount options: 10%, 20%, 30%
+  amount: number = 0;
+  selectedPaymentOption: string | null = null;
   selectedDiscount: number | null = null;
-  discountedAmount: number | null = null;
-  isLoading = false;
-  errorMessage: string | null = null;
+  finalPayableAmount: number | null = null;
+
+  paymentOptions = [
+    { name: 'Wallet', discount: 0.1 }, // 10% discount
+    { name: 'UPI', discount: 0.05 },   // 5% discount
+    { name: 'Net Banking', discount: 0 }, // No discount
+    { name: 'Credit Card', discount: -0.02 } // 2% surcharge
+  ];
 
   constructor() {}
 
-  calculateDiscount() {
-    this.errorMessage = null; // Reset error message
-    if (this.amount === null || this.amount <= 0) {
-      this.errorMessage = 'Please enter a valid amount greater than 0.';
-      return;
-    }
+  displayDiscount() {
+    const selectedOption = this.paymentOptions.find(
+      option => option.name === this.selectedPaymentOption
+    );
+    this.selectedDiscount = selectedOption ? selectedOption.discount : null;
+  }
 
-    if (this.selectedDiscount === null) {
-      this.errorMessage = 'Please select a discount.';
-      return;
-    }
+  calculateFinalAmount() {
+    if (this.selectedPaymentOption === null) return;
 
-    this.isLoading = true;
+    const selectedOption = this.paymentOptions.find(
+      option => option.name === this.selectedPaymentOption
+    );
+
+    if (!selectedOption) return;
+
     const worker = new Worker(
       new URL('./discount-calculator.worker', import.meta.url)
     );
+
     worker.onmessage = ({ data }) => {
-      this.discountedAmount = data.discountedAmount;
-      this.isLoading = false; // Stop loader
+      this.finalPayableAmount = data.finalAmount;
     };
-    worker.onerror = () => {
-      this.errorMessage = 'Something went wrong while calculating the discount.';
-      this.isLoading = false;
-    };
-    worker.postMessage({ amount: this.amount, discount: this.selectedDiscount });
+
+    worker.postMessage({
+      amount: this.amount,
+      discount: selectedOption.discount
+    });
+  }
+
+  // Helper method for absolute value
+  getAbsoluteValue(value: number): number {
+    return Math.abs(value);
   }
 }
