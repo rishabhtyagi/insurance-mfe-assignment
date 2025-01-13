@@ -16,7 +16,7 @@
 			"architect": {
 				"build": {
 					"builder": "ngx-build-plus:browser",
-					"options": {
+					"options": {	
 						"outputPath": "dist/container-app",
 						"index": "projects/container-app/src/index.html",
 						"main": "projects/container-app/src/main.ts",
@@ -32,6 +32,11 @@
 						"styles": [
 							"projects/container-app/src/styles.scss"
 						],
+						"stylePreprocessorOptions": {
+						"includePaths": [
+							"src"
+						]
+						},
 						"scripts": [],
 						"extraWebpackConfig": "projects/container-app/webpack.config.js",
 						"commonChunk": false
@@ -139,6 +144,11 @@
 						"styles": [
 							"projects/mfe-insurance-details/src/styles.scss"
 						],
+						"stylePreprocessorOptions": {
+						  "includePaths": [
+							"src"
+						  ]
+						},
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe-insurance-details/webpack.config.js",
 						"commonChunk": false
@@ -246,6 +256,11 @@
 						"styles": [
 							"projects/mfe-pay-premium/src/styles.scss"
 						],
+						"stylePreprocessorOptions": {
+						  "includePaths": [
+							"src"
+						  ]
+						},
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe-pay-premium/webpack.config.js",
             "commonChunk": false,
