@@ -14,7 +14,7 @@ Follow these steps to set up and run the project locally.
 ### Step 1: Clone the Repository
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/rishabhtyagi/insurance-mfe-assignment.git
 cd insurance-mfe-assignment
 ```
 
@@ -40,4 +40,9 @@ ng serve mfe-insurance-details
 ### Step 5: Start mfe-pay-premium
 ```sh
 ng serve mfe-pay-premium
+```
+
+### Demo link can be found as below
+```sh
+https://nagarro-my.sharepoint.com/:v:/p/rishabh_tyagi/Ec72_U4dkfROj16tbDSQQ7wBvS_g8W784DORwvW1nWzjQQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=q7PEAy
 ```

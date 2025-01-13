@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="26.0.5">
+  <diagram name="Page-1" id="krm30GhMiNPiFvgYjCCp">
+    <mxGraphModel dx="2918" dy="1924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-1" value="MFE-Pay-Premium" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="614" width="678" height="296" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-2" value="MFE-Insurance-Details" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="960" y="600" width="550" height="296" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-3" value="Container App" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="162" width="526" height="577" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-4" value="App Component" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="274" y="498" width="174" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-5" value="Routing Module" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="258" y="166" width="170" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-6" value="Shared Styles" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="498" y="498" width="155" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-7" value="Data Sharing Service" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="397" y="25" width="207" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-8" value="Insurance Details Component" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="995" y="793" width="260" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-9" value="Policy Service" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="637" width="158" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-10" value="Routing Module" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1305" y="805" width="170" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-11" value="Shared Data" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1291" y="637" width="147" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-12" value="Pay Premium Component" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-566" y="819" width="239" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-13" value="Discount Calculation Worker" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-442" y="639" width="260" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-14" value="Routing Module" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-247" y="819" width="170" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-15" value="Payment Service" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="651" width="178" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-16" value="" style="startArrow=none;endArrow=block;exitX=0.51;exitY=1;entryX=0.99;entryY=0.1;rounded=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-5" target="jiEgoA-XgNefrKbRK5s2-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-17" value="" style="startArrow=none;endArrow=block;exitX=0.4;exitY=1;entryX=0.75;entryY=0;rounded=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-5" target="jiEgoA-XgNefrKbRK5s2-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-18" value="" style="startArrow=none;endArrow=block;exitX=0.14;exitY=1;entryX=0.99;entryY=0.26;rounded=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-7" target="jiEgoA-XgNefrKbRK5s2-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-19" value="" style="startArrow=none;endArrow=block;exitX=0.08;exitY=1;entryX=1;entryY=0.42;rounded=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-7" target="jiEgoA-XgNefrKbRK5s2-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-20" value="Web Worker: Calculates Discount" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.68;entryY=0;rounded=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-13" target="jiEgoA-XgNefrKbRK5s2-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-312" y="762" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-21" value="CSRF Token Interceptor: Secures API Calls" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.53;exitY=1;entryX=0.88;entryY=0;rounded=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-7" target="jiEgoA-XgNefrKbRK5s2-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="104" />
+              <mxPoint x="515" y="462" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-22" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-9" target="jiEgoA-XgNefrKbRK5s2-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-23" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.32;entryY=0;rounded=0;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-15" target="jiEgoA-XgNefrKbRK5s2-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-581" y="762" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-24" value="Module Federation" style="startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1125" y="881" />
+              <mxPoint x="382" y="881" />
+            </Array>
+            <mxPoint x="382" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jiEgoA-XgNefrKbRK5s2-25" value="Module Federation" style="startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="jiEgoA-XgNefrKbRK5s2-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-446" y="883" />
+              <mxPoint x="314" y="883" />
+            </Array>
+            <mxPoint x="314" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
