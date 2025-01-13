@@ -2,3 +2,12 @@
 <p><strong>Policyholder Name:</strong> John Doe</p>
 <p><strong>Policy Number:</strong> 12345-INS</p>
 <p><strong>Coverage Amount:</strong> $500,000</p>
+
+<!-- Update policy details -->
+<label for="policyName">Policy Name:</label>
+<input [(ngModel)]="policyDetails.policyName" id="policyName" type="text" />
+
+<label for="premiumAmount">Premium Amount:</label>
+<input [(ngModel)]="policyDetails.premiumAmount" id="premiumAmount" type="number" />
+
+<button (click)="updatePolicyDetails()">Save Changes</button>
