@@ -1,27 +1,43 @@
-# InsuranceMfeAssignment
+# Insurance MFE Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+This project is a micro-frontend application built with Angular. It consists of a container app and a micro-frontend app (`mfe-pay-premium`).
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (version 14.x or later)
+- Angular CLI (version 15.2.4 or later)
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Follow these steps to set up and run the project locally.
 
-## Build
+### Step 1: Clone the Repository
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```sh
+git clone <repository-url>
+cd insurance-mfe-assignment
+```
 
-## Running unit tests
+### Step 2: Install Dependencies
+Install the dependencies for the entire monorepo.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+npm install
+```
 
-## Running end-to-end tests
+### Step 3: Start container app
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```sh
+ng serve container-app
+```
 
-## Further help
+### Step 4: Start mfe-insurance-details
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```sh
+ng serve mfe-insurance-details
+```
+
+### Step 5: Start mfe-pay-premium
+```sh
+ng serve mfe-pay-premium
+```

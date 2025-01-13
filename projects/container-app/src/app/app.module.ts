@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { InsuranceDetailsModule } from 'projects/mfe-insurance-details/src/app/insurance-details/insurance-details.module';
+import { CsrfTokenInterceptor } from './interceptors/csrf-token.interceptor'; // Import the CSRF interceptor
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { InsuranceDetailsModule } from 'projects/mfe-insurance-details/src/app/i
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: CsrfTokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
